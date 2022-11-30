@@ -50,7 +50,7 @@
     //Capas
     //layer es el nombre de la capa de consideracion
     var layer1 = L.tileLayer.betterWms(url, {
-            layers: 'gisv112:population_municipality',
+            layers: '',//enlace de gis
             transparent: true,
             visible: true,
             format: 'image/png',
@@ -89,14 +89,29 @@
                 layers:
                     [
                         {
-                            name: "Censo poblacional",
+                            name: "DepMayorCantMarkets",
                             layer: layer1
                         },
                         {
-                            name: "Test",
+                            name: "DepMayorCantMarketsByCat",
+                            layer: layer1
+                        },
+                        {
+                            name: "CantMayorVeg-MayorElect-MayorCarne",
+                            layer: layer1
+                        },
+                        {
+                            name: "CantPersonaXWeek-Feedback",
+                            layer: layer1
+                        },
+                        {
+                            name: "CantPersonaXWeek-FeedbackByCat",
                             layer: layer1
                         }
                     ]
+
+
+                    
             },
         ];
     
