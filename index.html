@@ -50,7 +50,15 @@
     //Capas
     //layer es el nombre de la capa de consideracion
     var layer1 = L.tileLayer.betterWms(url, {
-            layers: '',//enlace de gis
+            layers: 'finaltest:vw_max_super_cat_departamento',//enlace de gis
+            transparent: true,
+            visible: true,
+            format: 'image/png',
+            maxZoom: 14
+        });
+
+        var layer2 = L.tileLayer.betterWms(url, {
+            layers: 'finaltest:vw_personas_sas_cat',//enlace de gis
             transparent: true,
             visible: true,
             format: 'image/png',
@@ -93,6 +101,11 @@
                             layer: layer1
                         },
                         {
+                            name: "CantPersonaXWeek-Feedback",
+                            layer: layer2
+                        }
+                        /*,
+                        {
                             name: "DepMayorCantMarketsByCat",
                             layer: layer1
                         },
@@ -101,13 +114,9 @@
                             layer: layer1
                         },
                         {
-                            name: "CantPersonaXWeek-Feedback",
-                            layer: layer1
-                        },
-                        {
                             name: "CantPersonaXWeek-FeedbackByCat",
                             layer: layer1
-                        }
+                        }*/
                     ]
 
 
